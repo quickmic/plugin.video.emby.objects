@@ -195,7 +195,7 @@ class Monitor(monitor.Monitor):
             window('emby.playlist.start', clear=True)
 
     def Playlist_OnClear(self, server, data, *args, **kwargs):
-
+        xbmc.Player().stop()
         self.player.played = {}
 
         if data['playlistid']:
